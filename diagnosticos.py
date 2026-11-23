@@ -46,6 +46,7 @@ def registrar_diagnostico(medico):
 
         if not tiempo.isdigit() or int(tiempo) <= 0:
             print("El tiempo debe ser un número positivo.")
+            return
 
         nueva_prescripcion = {
             "medicamento": medicamento,

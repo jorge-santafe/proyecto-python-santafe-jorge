@@ -26,13 +26,14 @@ Seleccione el rol del usuario:
         return
 
     opcion = int(input("Opción: "))
-
-    if opcion == 1:
-        rol = "medico"
-    elif opcion == 2:
-        rol = "administrativo"
-    else:
-        print("Usuario no válido")
+    match opcion:
+        case 1:
+            rol = "medico"
+        case 2:
+            rol = "administrativo"
+        case _:
+            print("Usuario no valido")
+            return
 
     datos = cargar_datos()
 
